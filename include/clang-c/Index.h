@@ -2440,6 +2440,24 @@ enum CXLinkageKind {
 CINDEX_LINKAGE enum CXLinkageKind clang_getCursorLinkage(CXCursor cursor);
 
 /**
+ * \brief Describe the visibility of the entity referred to by a cursor.
+ */
+enum CXVisibilityKind {
+  /** \brief This value indicates that no visibility information is available
+   * for a provided CXCursor. */
+  CXVisibility_Invalid,
+
+  /** \brief Symbol not seen by the linker. */
+  CXVisibility_Hidden,
+  /** \brief Symbol seen by the linker but resolves to a symbol inside this object. */
+  CXVisibility_Protected,
+  /** \brief Symbol seen by the linker and acts like a normal symbol. */
+  CXVisibility_Default,
+};
+
+CINDEX_LINKAGE enum CXVisibilityKind clang_getCursorVisibility(CXCursor cursor);
+
+/**
  * \brief Determine the availability of the entity that this cursor refers to,
  * taking the current target platform into account.
  *
