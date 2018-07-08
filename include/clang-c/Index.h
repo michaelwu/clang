@@ -2586,7 +2586,8 @@ enum CXCursorKind {
   CXCursor_ObjCDesignatedInitializer     = 434,
   CXCursor_ObjCRuntimeVisible            = 435,
   CXCursor_ObjCBoxable                   = 436,
-  CXCursor_LastAttr                      = CXCursor_ObjCBoxable,
+  CXCursor_FlagEnum                      = 437,
+  CXCursor_LastAttr                      = CXCursor_FlagEnum,
 
   /* Preprocessing */
   CXCursor_PreprocessingDirective        = 500,
