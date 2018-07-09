@@ -3268,7 +3268,8 @@ enum CXTypeKind {
   CXType_OCLQueue = 159,
   CXType_OCLReserveID = 160,
 
-  CXType_ObjCObject = 161
+  CXType_ObjCObject = 161,
+  CXType_ObjCTypeParam = 162
 };
 
 /**
